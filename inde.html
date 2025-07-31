@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello world</h2>
+    <p>This is a simple HTML document.</p>
+    <p>It contains a heading and a paragraph.</p>
+    <p>Feel free to modify it as you wish!</p>
+    <p>Have a great day!</p>
+    <p>Enjoy coding!</p>
+    <p>Keep learning and improving!</p>
+    <p>HTML is fun!</p>
+    <p>Remember to validate your code!</p>
+    <p>Check your syntax and structure!</p>
+    <p>Use comments to explain your code!</p>
+    <p>Stay curious and keep exploring!</p>
+    <p>Web development is an exciting field!</p>
+    <p>There are always new things to learn!</p>
+    <p>Don't hesitate to ask for help!</p>
+    <p>Join online communities for support!</p>
+    <p>Share your knowledge with others!</p>
+    <p>Practice makes perfect!</p>
+    <p>Keep building projects to improve your skills!</p>
+    <p>Remember to have fun while coding!</p>
+    <p>Happy coding!</p>
+
+    <p>Stay motivated and keep pushing forward!</p>
+    <p>Believe in yourself and your abilities!</p>
+    <p>Every small step counts towards your goals!</p>
+    <p>Celebrate your achievements, no matter how small!</p>
+    <p>Keep a positive mindset and stay focused!</p>
+    <p>Keep experimenting with new ideas!</p>
+    <p>Don't be afraid to make mistakes!</p>
+    <p>Learn from your errors and grow!</p>
+    <head>
+    ...existing code...
+    <style>
+        .rainbow-hover {
+            transition: background 0.5s;
+        }
+        .rainbow-hover:hover {
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        p {
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        p:nth-child(5n) {
+            color: #ff6347; /* Tomato for every fifth paragraph */
+        }
+        p:nth-child(10n) {
+            color: #4682b4; /* Steel blue for every tenth paragraph */
+        }
+        p:nth-child(15n) {
+            color: #daa520; /* Goldenrod for every fifteenth paragraph */
+        }
+        p:nth-child(20n) {
+            color: #adff2f; /* Green yellow for every twentieth paragraph */
+        }
+        p:nth-child(25n) {
+            color: #ff8c00; /* Dark orange for every twenty-fifth paragraph */
+        }
+        p:nth-child(30n) {
+            color: #9932cc; /* Dark orchid for every thirtieth paragraph */
+        }
+        p:nth-child(35n) {
+            color: #ff4500; /* Orange red for every thirty-fifth paragraph */
+        }
+        p:nth-child(40n) {
+            color: #7cfc00; /* Lawn green for every fortieth paragraph */
+        }
+        p:nth-child(45n) {
+            color: #7fff00; /* Chartreuse for every forty-fifth paragraph */
+        }
+        p:nth-child(50n) {
+            color: #ff6347; /* Tomato for every fiftieth paragraph */
+        }
+        p:nth-child(55n) {
+            color: #4682b4; /* Steel blue for every fifty-fifth paragraph */
+        }
+        p:nth-child(60n) {
+            color: #daa520; /* Goldenrod for every sixtieth paragraph */
+        }
+        p:nth-child(65n) {
+            color: #adff2f; /* Green yellow for every sixty-fifth paragraph */
+        }
+        p:nth-child(70n) {
+            color: #ff8c00; /* Dark orange for every seventieth paragraph */
+        }
+        p:nth-child(75n) {
+            color: #9932cc; /* Dark orchid for every seventy-fifth paragraph */
+        }
+        p:nth-child(80n) {
+            color: #ff4500; /* Orange red for every eightieth paragraph */
+        }
+        p:nth-child(85n) {
+            color: #7cfc00; /* Lawn green for every eighty-fifth paragraph */
+        }
+        p:nth-child(90n) {
+            color: #7fff00; /* Chartreuse for every ninetieth paragraph */
+        }
+        p:nth-child(95n) {
+            color: #ff6347; /* Tomato for every ninety-fifth paragraph */
+        }
+        p:nth-child(100n) {
+            color: #4682b4; /* Steel blue for every hundredth paragraph */
+        }
+        p:nth-child(105n) {
+            color: #daa520; /* Goldenrod for every hundred and fifth paragraph */
+        }
+        
+    </style>
+</head>
+<body>
+    ...existing code...
+    <script>
+        // Ranglar ro'yxati
+        const colors = [
+            "#FF5733", "#FFBD33", "#DBFF33", "#75FF33",
+            "#33FF57", "#33FFBD", "#33DBFF", "#3375FF",
+            "#5733FF", "#BD33FF", "#FF33DB", "#FF3375"
+
+        ];
+
+        document.querySelectorAll('p').forEach(p => {
+            p.classList.add('rainbow-hover');
+            let intervalId;
+            p.addEventListener('mouseenter', () => {
+                let i = 0;
+                intervalId = setInterval(() => {
+                    p.style.background = colors[i % colors.length];
+                    i++;
+                }, 200);
+            });
+            p.addEventListener('mouseleave', () => {
+                clearInterval(intervalId);
+                p.style.background = '';
+            });
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.color = `hsl(${index * 30}, 100%, 50%)`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.fontSize = `${12 + index * 2}px`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.fontWeight = index % 2 === 0 ? 'bold' : 'normal';
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.textDecoration = index % 3 === 0 ? 'underline' : 'none';
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.fontStyle = index % 4 === 0 ? 'italic' : 'normal';
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.textTransform = index % 5 === 0 ? 'uppercase' : 'none';
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.letterSpacing = `${index}px`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.lineHeight = `${1.5 + index * 0.1}`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.margin = `${index * 5}px 0`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.padding = `${index * 2}px`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.border = `${index + 1}px solid ${colors[index % colors.length]}`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.backgroundColor = index % 2 === 0 ? '#f0f0f0' : '#e0e0e0';
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.boxShadow = `0 0 ${index + 1}px rgba(0, 0, 0, 0.1)`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.borderRadius = `${index * 2}px`;
+        });
+
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.opacity = 1 - (index * 0.05);
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.transform = `rotate(${index * 5}deg)`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.transition = `all ${0.5 + index * 0.1}s ease`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.textShadow = `0 0 ${index + 1}px rgba(0, 0, 0, 0.2)`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.backgroundImage = `linear-gradient(45deg, ${colors[index % colors.length]}, transparent)`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.backgroundSize = `${100 + index * 10}% ${100 + index * 10}%`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.backgroundPosition = `${index * 10}% ${index * 10}%`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.filter = `blur(${index}px)`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.transformOrigin = `${50 + index * 2}% ${50 + index * 2}%`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.animation = `fadeIn ${1 + index * 0.1}s ease-in-out`;
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.animationIterationCount = index % 2 === 0 ? 'infinite' : '1';
+        });
+        document.querySelectorAll('p').forEach((p, index) => {
+            p.style.animationDirection = index % 2 === 0 ? 'normal' : 'reverse';
+        });
+
+    </script>
+</body>
+<!-- ...existing code... -->
+    <p>Keep your code clean and organized!</p>
+    <p>Use meaningful variable names!</p>
+    <p>Write reusable functions!</p>
+    <p>Test your code regularly!</p>
+    <p>Document your code for future reference!</p>
+    <p>Stay updated with the latest trends in web development!</p>
+    <p>Network with other developers!</p>
+    <p>Attend workshops and webinars!</p>
+    <p>Contribute to open source projects!</p>
+    <p>Build a portfolio to showcase your work!</p>
+</body>
+</html>
